@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Stack_a.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\assert.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mem.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\except.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\atom.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\bsp\src\bsp_led.c">
+      <Filter>usr\bsp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\bsp.c">
+      <Filter>usr\bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\main.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\bsp\stm32f10x_assert.c">
+      <Filter>usr\bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\bsp\stm32f10x_it.c">
+      <Filter>usr\bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\SysInfoTest.c">
+      <Filter>usr\bsp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\Stack_a.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\atom.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\user\includes.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\user\FreeRTOSConfig.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{c52623e5-bb3d-4bc7-bcbd-cce460eeb8f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{7f4e4b82-6966-4892-8d7c-5b34f6ced4cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usr">
+      <UniqueIdentifier>{a6381c35-9f95-4ace-b4d7-2294ca343d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usr\bsp">
+      <UniqueIdentifier>{6322989d-7163-4b20-b9ae-2cf887a98dcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usr\bsp\src">
+      <UniqueIdentifier>{45b3b074-e70b-44a7-804f-3675e3115768}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
