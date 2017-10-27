@@ -46,7 +46,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>./inc;../../user;../../user/bsp;../../user/bsp/inc;../../fwlib/CMSIS;../../fwlib/STM32F10x_StdPeriph_Driver/inc;../../freertos/portable/RVDS/ARM_CM3;../../freertos/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./inc;../../user;../../user/bsp;../../user/hal/inc;../../user/task/inc;../../user/bsp/inc;../../fwlib/CMSIS;../../fwlib/STM32F10x_StdPeriph_Driver/inc;../../freertos/portable/RVDS/ARM_CM3;../../freertos/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;__CC_ARM;STM32F10X_MD;USE_STDPERIPH_DRIVER;__dsb_vs;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -102,13 +102,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\user\bsp.c" />
+    <ClCompile Include="..\..\user\bsp\src\bsp_button.c" />
+    <ClCompile Include="..\..\user\bsp\src\BSP_gui.c" />
     <ClCompile Include="..\..\user\bsp\src\bsp_led.c" />
+    <ClCompile Include="..\..\user\bsp\src\bsp_st7587.c" />
     <ClCompile Include="..\..\user\bsp\stm32f10x_assert.c" />
     <ClCompile Include="..\..\user\bsp\stm32f10x_it.c" />
+    <ClCompile Include="..\..\user\hal\src\hal_button.c" />
+    <ClCompile Include="..\..\user\hal\src\hal_queue.c" />
     <ClCompile Include="..\..\user\main.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\user\SysInfoTest.c" />
+    <ClCompile Include="..\..\user\task\src\task_button.c" />
     <ClCompile Include="src\assert.c" />
     <ClCompile Include="src\atom.c" />
     <ClCompile Include="src\except.c" />

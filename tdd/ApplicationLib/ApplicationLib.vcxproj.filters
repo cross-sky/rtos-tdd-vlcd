@@ -34,6 +34,22 @@
     <ClCompile Include="..\..\user\SysInfoTest.c">
       <Filter>usr\bsp</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\user\bsp\src\bsp_st7587.c">
+      <Filter>usr\bsp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\hal\src\hal_queue.c">
+      <Filter>usr\hal\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\hal\src\hal_button.c">
+      <Filter>usr\hal\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\task\src\task_button.c">
+      <Filter>usr\task\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\bsp\src\bsp_button.c">
+      <Filter>usr\bsp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\user\bsp\src\BSP_gui.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Stack_a.h">
@@ -64,6 +80,18 @@
     </Filter>
     <Filter Include="usr\bsp\src">
       <UniqueIdentifier>{45b3b074-e70b-44a7-804f-3675e3115768}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usr\hal">
+      <UniqueIdentifier>{08b9b580-8a77-4543-8f90-fb6feff90bea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usr\hal\src">
+      <UniqueIdentifier>{bb6e8401-f0d4-4568-a4de-f3f4532d1df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usr\task">
+      <UniqueIdentifier>{555c1b47-462b-4a56-86e7-c22d538c6dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usr\task\src">
+      <UniqueIdentifier>{60b271c6-ee05-4b15-beee-79a1a5f70016}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

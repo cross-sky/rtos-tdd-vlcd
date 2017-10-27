@@ -3,18 +3,33 @@
   <ItemGroup>
     <ClCompile Include="AllTests.cpp" />
     <ClCompile Include="src\StackA_Test.cpp">
-      <Filter>src</Filter>
+      <Filter>bsp</Filter>
     </ClCompile>
     <ClCompile Include="src\Atom_Test.cpp">
-      <Filter>src</Filter>
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BSP_lcd_Test.cpp">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bsp_button_Test.cpp">
+      <Filter>bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="spy\bsp_button_spy.c">
+      <Filter>spy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AllTests.h" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="src">
+    <Filter Include="bsp">
       <UniqueIdentifier>{f5532758-b210-41b3-ad47-a2517b97596b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hal">
+      <UniqueIdentifier>{0e4c774a-555f-4866-88d8-bb601837ef02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="spy">
+      <UniqueIdentifier>{b5879e02-d3b6-4121-a62c-23423e308b85}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

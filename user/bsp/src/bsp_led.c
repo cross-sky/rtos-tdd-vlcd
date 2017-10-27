@@ -1,7 +1,5 @@
 #include "bsp.h"
 
-
-
 const LED_t LED[]={
 	// Name    ,PORT , PIN       , CLOCK              , Init
 	{LED1 ,GPIOB,GPIO_Pin_12,RCC_APB2Periph_GPIOB,LED_OFF},   // 

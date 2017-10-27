@@ -1,6 +1,8 @@
 #ifndef __BSP_LED_H
 #define __BSP_LED_H
 
+#include "bsp_hw.h"
+
 typedef enum
 {
 	LED1 = 0,

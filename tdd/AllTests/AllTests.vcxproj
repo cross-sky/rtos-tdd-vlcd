@@ -108,7 +108,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../TDDInclude;../ApplicationLib/inc;../../user;../../user/bsp;../../user/bsp/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../TDDInclude;../ApplicationLib/inc;../../user;../../user/bsp;../../user/bsp/inc;../../user/hal/inc;../../user/task/inc;./spy;../../fwlib/CMSIS;../../fwlib/STM32F10x_StdPeriph_Driver/inc;../../freertos/portable/RVDS/ARM_CM3;../../freertos/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;__CC_ARM;STM32F10X_MD;USE_STDPERIPH_DRIVER;__dsb_vs;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -126,7 +126,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>../CppUTestd.lib;../ApplicationLib/$(Configuration)/ApplicationLib.lib;odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../CppUTestd.lib;../ApplicationLib/$(Configuration)/ApplicationLib.lib;odbc32.lib;odbccp32.lib;winmm.lib;../../fwlib/STM32F10x_StdPeriph_Driver/stm32-vs.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>./$(Configuration)/AllTests.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ManifestFile>./$(Configuration)/$(TargetFileName).intermediate.manifest</ManifestFile>
@@ -137,6 +137,7 @@
       <DataExecutionPrevention>
       </DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -148,7 +149,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AllTests.cpp" />
+    <ClCompile Include="spy\bsp_button_spy.c" />
     <ClCompile Include="src\Atom_Test.cpp" />
+    <ClCompile Include="src\bsp_button_Test.cpp" />
+    <ClCompile Include="src\BSP_lcd_Test.cpp" />
     <ClCompile Include="src\StackA_Test.cpp" />
   </ItemGroup>
   <ItemGroup>

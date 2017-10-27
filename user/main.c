@@ -7,6 +7,7 @@
 */
 static void vTaskLED(void *pvParameters);
 static void AppTaskCreate (void);
+static void BSP_lcd_task(void *pvParameters);
 
 /*
 **********************************************************************************************************
@@ -43,7 +44,8 @@ int main(void)
 
 static void AppTaskCreate (void)
 {
-	xTaskCreate(vTaskLED, "task_led", 512, NULL, 1, &xHandleTaskLED);
+	xTaskCreate(vTaskLED, "task_led", 150, NULL, 1, &xHandleTaskLED);
+	xTaskCreate(BSP_lcd_task, "task_lcd", 200, NULL, 2, NULL);
 }
 
 static void vTaskLED(void *pvParameters)
@@ -55,3 +57,19 @@ static void vTaskLED(void *pvParameters)
 	}
 }
 
+static void BSP_lcd_task(void *pvParameters)
+{
+	uint8_t i = 0;
+	while(1)
+	{
+		if ((i++) & 0x01)
+		{
+			BSP_lcd_test();
+			BSP_lcd_refresh();
+		}
+		else
+			BSP_lcd_blank();
+
+		vTaskDelay( 2000 / portTICK_PERIOD_MS);
+	}
+}
