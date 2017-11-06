@@ -33,4 +33,7 @@ TEST(BSP_BUTTON, shortKey)
 
 	bsp_button_spy_set_key(~GPIO_Pin_1);
 	LONGS_EQUAL(HAL_BUTTON_EXIT, bsp_button_get());
+
+	bsp_button_spy_set_key(~GPIO_Pin_3);
+	LONGS_EQUAL(BSP_BUTTON_DOWN, bsp_button_get());
 }

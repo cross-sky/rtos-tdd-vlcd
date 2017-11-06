@@ -7,5 +7,7 @@ void BSP_init(void)
 	BSP_init_led();
 
 	BSP_lcd_init();
+
+	hal_button_init();
 }
 

@@ -1,4 +1,4 @@
-#include "bsp.h"
+#include "bsp_button.h"
 
 #define BTN_MASK 0x1f
 #define BTN_RCC RCC_APB2Periph_GPIOB
@@ -19,8 +19,12 @@ const BSP_BUTTON_HW_t _tabBtn[BTN_MAX]={
 void bsp_button_init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+	GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable , ENABLE);
+
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
 	GPIO_InitStructure.GPIO_Pin = BTN_PIN;
 	GPIO_Init(BTN_PORT, &GPIO_InitStructure);
 }
@@ -72,7 +76,8 @@ static uint16_t bsp_button_check(uint16_t hwValue)
 
 uint16_t bsp_button_getInput(void)
 {
-	return GPIO_ReadInputData(BTN_PORT) & BTN_PIN;
+	//return (GPIO_ReadInputData(BTN_PORT) & BTN_PIN);
+	return GPIO_ReadInputData(BTN_PORT);
 }
 
 HAL_BUTTON_ENUM bsp_button_get(void)
